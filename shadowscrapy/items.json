@@ -1,1 +1,2 @@
-[{"server_port": 8185, "local_port": 1080, "server": "45.32.129.135", "timeout": 60, "password": 444139, "method": "aes-256-cfb"}]
+[{"server_port": 8246, "local_port": 1080, "server": "45.32.70.84", "timeout": 60, "password": 492594, "method": "aes-256-cfb"},
+{"server_port": 8478, "local_port": 1080, "server": "104.238.182.52", "timeout": 60, "password": 225193, "method": "aes-256-cfb"}]
