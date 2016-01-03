@@ -11,7 +11,7 @@ class shadowSpider(Spider):
     name = "shadow"
     allowed_domains = ["feixunvpn.org"]
     TESTSS_URL = "http://www.feixunvpn.com/page/testss.html"
-    start_urls = [ TESTSS_URL ]
+    start_urls = [TESTSS_URL]
 
     def parse(self, response):
         sel = Selector(response)
