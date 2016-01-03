@@ -7,8 +7,5 @@
 
 
 class ShadowscrapyPipeline(object):
-    def __init__(self):
-        self.
-
     def process_item(self, item, spider):
         return item

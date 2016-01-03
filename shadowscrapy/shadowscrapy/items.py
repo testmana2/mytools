@@ -10,9 +10,10 @@ import scrapy
 
 class ShadowscrapyItem(scrapy.Item):
     # define the fields for your item here like:
-    name = scrapy.Field()
-    ip = scrapy.Field()
-    port = scrapy.Field()
+    # name = scrapy.Field()
+    server = scrapy.Field()
+    server_port = scrapy.Field()
+    local_port = scrapy.Field()
     password = scrapy.Field()
+    timeout = scrapy.Field()
     method = scrapy.Field()
-
