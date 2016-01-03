@@ -1,2 +1,1 @@
-[{"ip": "45.32.69.222", "password": 638634, "port": 8748, "name": "\u6d4b\u8bd5\u8282\u70b9\uff1a\u7f8e\u56fdVL-26", "method": "aes-256-cfb"},
-{"ip": "45.63.53.209", "password": 812845, "port": 8852, "name": "\u6d4b\u8bd5\u8282\u70b9\uff1a\u7f8e\u56fdVL-28", "method": "aes-256-cfb"}][{"server_port": 8094, "local_port": 1080, "server": "45.63.83.202", "timeout": 60, "password": 445956, "method": "aes-256-cfb"}]
+[{"server_port": 8185, "local_port": 1080, "server": "45.32.129.135", "timeout": 60, "password": 444139, "method": "aes-256-cfb"}]

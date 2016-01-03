@@ -13,7 +13,12 @@ BOT_NAME = 'shadowscrapy'
 SPIDER_MODULES = ['shadowscrapy.spiders']
 NEWSPIDER_MODULE = 'shadowscrapy.spiders'
 
+# ITEM_PIPELINES = {
+#     'shadowscrapy.pipelines.ShadowscrapyPipeline': 800,
+# }
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1"
 
 COOKIES_ENABLES = False
+DOWNLOAD_DELAY = 3

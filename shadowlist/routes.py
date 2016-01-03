@@ -1,8 +1,15 @@
 __author__ = 'thomas'
 
-from flask import session, redirect, url_for, render_template_string, request
+from flask import current_app, session, redirect, url_for, render_template_string, request
 from . import subapp
+import json
+
 
 @subapp.route('/', methods=['GET', 'POST'])
 def index():
-    return 'Hello! ss!'
+    items_file = current_app.config.get('SHADOW_ITEM_PATH', None)
+    with open(items_file) as fp:
+        item_list = json.load(fp)
+        return '\n'.join([json.dumps(e) for e in item_list])
+
+    return ''

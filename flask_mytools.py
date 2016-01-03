@@ -10,7 +10,6 @@ def create_subapp_info():
 _app_infos = create_subapp_info()
 
 def create_db(app):
-    app.config.from_object('app_config')
     db = SQLAlchemy(app)
     return db
 
@@ -18,7 +17,7 @@ def create_app(debug=False):
     """Create an application."""
     app = Flask(__name__)
     app.debug = debug
-    app.config['SECRET_KEY'] = 'gjr39dkjn344_!67#'
+    app.config.from_object('app_config')
 
     for bp, url_prefix in _app_infos:
         app.register_blueprint(bp, url_prefix=url_prefix)
