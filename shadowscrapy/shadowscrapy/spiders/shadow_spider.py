@@ -24,7 +24,7 @@ class shadowSpider(Spider):
             item["server"] = p.xpath('span[1]/text()').extract()[0]
             port = int(p.xpath('text()').extract()[2].replace(u'端口：', u'').strip())
             item["server_port"] = port
-            item["password"] = int(p.xpath('text()').extract()[3].replace(u'密码：', u'').strip())
+            item["password"] = p.xpath('text()').extract()[3].replace(u'密码：', u'').strip()
             item["method"] = p.xpath('span[2]/text()').extract()[0]
 
             item["local_port"] = 1080
