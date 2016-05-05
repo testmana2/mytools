@@ -12,12 +12,12 @@ class shadowSpider(Spider):
     allowed_domains = ["feixunvpn.org"]
     TESTSS_URL = "http://www.feixunvpn.com/page/testss.html"
     start_urls = [TESTSS_URL]
+    _target_ip_num = 0
 
     def parse(self, response):
         sel = Selector(response)
         proxylist = sel.xpath('//div[@class="pagecontent"]/div[@class="testvpnitem"]')
 
-        had_target_ip = False
         for p in proxylist:
             item = ShadowscrapyItem()
             srv_name = p.xpath('b/text()').extract()[0]
@@ -31,8 +31,8 @@ class shadowSpider(Spider):
             item["timeout"] = 60
 
             if u'美国' in srv_name:
-                had_target_ip = True
+                self._target_ip_num += 1
                 yield item
 
-        if not had_target_ip:
+        if self._target_ip_num < 3:
             yield Request(self.TESTSS_URL, callback=self.parse)
